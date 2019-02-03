@@ -1,0 +1,56 @@
+<!-- These are not the droids you are searching for, you can go about your business -->
+<!-- you don't need to edit index.html! -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Test</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <style type="text/css">
+    .wrapper { width:70%; margin:auto; padding:40px 0; }
+    .button-loading { background-color:dodgerblue; color:white }
+    .button-not-loading { background-color:lawngreen; color:white }
+    th td { text-align:center }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="results-table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Employee Name</th>
+          <th>NI Number</th>
+          <th>Hours Worked</th>
+          <th>Hourly Rate</th>
+          <th>Shift Total</th>
+        </tr>
+      </thead>
+      <tbody id="results-body">
+      </tbody>
+      <tfoot>
+        <tr>
+          <td id="totals-annot"></td>
+          <td></td>
+          <td></td>
+          <td id="totals-hours"></td>
+          <td></td>
+          <td id="totals-paid"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <button id="get-records" class="button-not-loading">Get next</button>
+</div>
+
+<!-- SCRIPTS -->
+<!-- supporting file, you don't need to edit this -->
+<script src="./server.js"></script>
+
+<!-- this is the file you should be editing -->
+<script src="./testfile.js"></script>
+</body>
+</html>
