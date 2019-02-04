@@ -29,18 +29,33 @@ function getRecords () {
   // you can get a SINGLE record by calling Server.getRecord(recordId, callbackFunction)
   // callbackFunction takes 2 parameters, error and data
   // invocation as follows
-  Server.getRecord(recordId, function (error, data) {
-    // if the fetch is unsuccessful the callback function is invoked with the error only
-    // if the fetch is successful the callback is invoked with error variable set to null, and data variable will hold the response (i.e. the record you wanted to retrieve)
-  });
-
-	
+  
+  	
   // you need to make sure the list is not rendered until we have the records...but need to allow for any fetch errors or app will hang
 	// i.e. a record you request might not exist - how would you allow for this?
 	// when you have the records, call processRecords as follows
   processRecords(allTheRecords);
 }
 
+/**
+ * @description Retrieves a record from server.
+ * @version 0.0.1
+ * @async
+ * @function getRecordAsync
+ * @param {number} id - The employee's id to be searched.
+ * @returns {Promise} Promise object represents the employee.
+ */
+function getRecordAsync(id) {
+  return new Promise(function(resolve, reject) {
+    Server.getRecord(id, function(error, data) {
+          if (error !== null){
+            reject(error);
+          } else {
+            resolve(data);
+          }
+      });
+  });
+}
 
 function processRecords (records) {
 
