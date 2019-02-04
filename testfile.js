@@ -76,9 +76,8 @@ function processRecords (records) {
   toggleButton(true);
   var sortedRecords = sortRecords(records);
   var html = "";
-  var tr;
+  var tr = "";
   sortedRecords.forEach(function (index, value, array) {
-    tr = "";
     tr +=
       "<tr>" +
         "<td>" + value.date + "</td>" +
@@ -88,8 +87,8 @@ function processRecords (records) {
         "<td>" + value.hourlyRate + "</td>" +
         "<td>" + (value.hoursWorked * value.hourlyRate) + "</td>" +
       "</tr>";
-    html += tr;
   });
+  html = tr;
   document.getElementById("results-body").innerHTML = html;
   addTotals(sortedRecords);
 }
