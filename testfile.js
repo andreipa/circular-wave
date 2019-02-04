@@ -77,7 +77,7 @@ function processRecords (records) {
   var sortedRecords = sortRecords(records);
   var html = "";
   var tr = "";
-  sortedRecords.forEach(function (index, value, array) {
+  sortedRecords.forEach(function (value, index, array) {
     tr +=
       "<tr>" +
         "<td>" + value.date + "</td>" +
