@@ -3,7 +3,7 @@
 var btn = document.getElementById("get-records");
 btn.addEventListener("click", buttonHandler);
 
-var buttonHandler = function () {
+function buttonHandler() {
 
   toggleButton(false);
   getRecords();
