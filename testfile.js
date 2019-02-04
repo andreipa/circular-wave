@@ -113,8 +113,8 @@ function addTotals (records) {
   var paid = 0;
 
   records.forEach(function (value, index) {
-    hours += value.hoursWorked;
-    paid += (value.hoursWorked * value.hourlyRate);
+    hours += parseFloat(value.hoursWorked);
+    paid += (parseFloat(value.hoursWorked) * parseFloat(value.hourlyRate));
   });
 
   document.getElementById("totals-annot").innerHTML = "TOTALS";
