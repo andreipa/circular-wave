@@ -30,11 +30,17 @@ function getRecords () {
   // callbackFunction takes 2 parameters, error and data
   // invocation as follows
   
+  var promises = [];
+
+  for (var i = 0; i < ids.length; i++){
+    var promise = getRecordAsync(ids[i]);
+    promises.push(promise);
+  }
   	
   // you need to make sure the list is not rendered until we have the records...but need to allow for any fetch errors or app will hang
 	// i.e. a record you request might not exist - how would you allow for this?
 	// when you have the records, call processRecords as follows
-  processRecords(allTheRecords);
+  //processRecords(allTheRecords);
 }
 
 /**
