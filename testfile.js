@@ -38,7 +38,7 @@ function getRecords () {
   // you need to make sure the list is not rendered until we have the records...but need to allow for any fetch errors or app will hang
 	// i.e. a record you request might not exist - how would you allow for this?
 	// when you have the records, call processRecords as follows
-  processRecords(allThe Records);
+  processRecords(allTheRecords);
 }
 
 
