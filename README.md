@@ -1,4 +1,4 @@
-# Circular Wave Technical Assessment #
+# Circular Wave #
 
 For this assessment we'll need you to fix some broken code.
 
@@ -37,6 +37,4 @@ On running `index.html` in a browser, the app should simply show a list of line 
 6. Ensure the button returns to its starting "Get data" state
 
 
-There is no time limit, although you can reckon on around 2 - 3 hours. You don't have to finish it all - we are looking for clear thinking and problem solving more than perfect code or JS knowledge. just get as far as you can. When you've finished, save the whole folder and email it to us at info@circularwave.co.uk along with how long you spent.
-
-Thanks!
+There is no time limit, although you can reckon on around 2 - 3 hours. You don't have to finish it all - we are looking for clear thinking and problem solving more than perfect code or JS knowledge.
